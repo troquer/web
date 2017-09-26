@@ -12,6 +12,7 @@
             <option value="">--------</option>
             <!-- ここにforeachでスキルの一覧を。 -->
             <!-- ここを変更したらどうなるか -->
+            <!-- aaaaaaaaaaaaaaa -->
           </select>
           <input style="display:block; margin:0 auto; background-color:dd5866; color:white;" class="btn" type="button" name="" value="勉強仲間を探す">
         </form>
