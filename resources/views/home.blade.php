@@ -10,6 +10,8 @@
         <form class="" action="index.html" method="post">
           <select style="width:200px; font-size:30px; margin-bottom:15px;" class="" name="">
             <option value="">--------</option>
+            <!-- ここにforeachでスキルの一覧を。 -->
+            <!-- ここを変更したらどうなるか -->
           </select>
           <input style="display:block; margin:0 auto; background-color:dd5866; color:white;" class="btn" type="button" name="" value="勉強仲間を探す">
         </form>

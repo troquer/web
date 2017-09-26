@@ -12,13 +12,15 @@ class SkillsController extends Controller
       $this->middleware('auth');
   }
   public function index(){
-    // $skills = Skill::orderBy('created_at', 'asc')->get();
-    return view('registerSkills');
+    $skills = Skill::orderBy('created_at', 'asc')->get();
+    return view('registerSkills',[
+      'skills'=>$skills
+    ]);
   }
-  public function register(){
+  public function register(Request $request){
     $skills = new Skill;
     $skills->skill_name = $request->skill_name;
-    $skills->skill_category = $request->skill_category;
+    $skills->category_id = $request->category_id;
     $skills->save();
     return redirect('/staff');
   }
