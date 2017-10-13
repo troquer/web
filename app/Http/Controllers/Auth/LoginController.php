@@ -4,6 +4,7 @@ namespace Troquer\Http\Controllers\Auth;
 
 use Troquer\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Socialite;
 
 class LoginController extends Controller
 {
@@ -35,5 +36,16 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    // 以下、Facebook 認証
+    public function redirectToProvider()
+    {
+        return Socialite::driver('facebook')->redirect();
+    }
+    public function handleProviderCallback()
+    {
+        $user = Socialite::driver('facebook')->user();
+        dd($user);
     }
 }

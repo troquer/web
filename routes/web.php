@@ -27,3 +27,7 @@ Route::post('/registerSkills','SkillsController@register');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// Facebook Authentification
+Route::get('/login/facebook', 'Auth\LoginController@redirectToProvider');
+Route::get('/callback', 'Auth\LoginController@handleProviderCallback');
